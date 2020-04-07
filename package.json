@@ -56,6 +56,8 @@
     "babel-loader": "^8.1.0",
     "bindings": "^1.5.0",
     "ejs": "^3.0.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "express": "^4.17.1",
     "jest": "^25.2.7",
     "lodash.isempty": "^4.4.0",
