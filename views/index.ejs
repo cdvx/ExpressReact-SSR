@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript">
+    window.initialData = <%-JSON.stringify(initialData)%>
+    </script>
 </head>
 <body>
-    <div id="root"><%- initialContent -%></div>
-    
+    <div id="root"><%- initialMarkUp -%></div>
 </body>
 <script src='/bundle.js'></script>
 </html>

@@ -7,7 +7,7 @@ module.exports = {
       path.resolve('./node_modules')
     ],
   },
-    entry: './lib/renderers/dom.js',
+  entry: './lib/renderers/dom.js',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'

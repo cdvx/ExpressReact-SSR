@@ -12,20 +12,33 @@
     "test": "jest --watch"
   },
   "jest": {
-    "moduleFileExtensions": ["js", "json", "jsx", "ts", "tsx", "node"]},
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "externals": [
+    "child_process"
+  ],
   "babel": {
     "presets": [
       "@babel/preset-react",
       "@babel/preset-env"
     ],
     "plugins": [
-      "@babel/plugin-proposal-class-properties"
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-transform-runtime"
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.9.0",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "webpack": "^4.42.1",
@@ -38,13 +51,17 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
+    "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
+    "bindings": "^1.5.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
     "jest": "^25.2.7",
+    "lodash.isempty": "^4.4.0",
     "pm2": "^4.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "worker-farm": "^1.7.0"
   }
 }
