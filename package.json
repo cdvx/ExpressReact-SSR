@@ -4,12 +4,16 @@
   "description": "",
   "main": "lib/server.js",
   "scripts": {
-    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name appDev",
     "kill": "npx pm2 kill",
     "log": "npx pm2 logs",
     "wbpk": "webpack -wd ",
     "time": "time npx webpack -d",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "verify-tests": "jest --coverage",
+    "build-webpack": "webpack -p",
+    "build-node": "babel lib --out-dir build --copy-files",
+    "start:prod": "NODE_ENV=production NODE_PATH=./build pm2 start build/server.js -i max --name appProd",
   },
   "jest": {
     "moduleFileExtensions": [
@@ -30,7 +34,14 @@
   "babel": {
     "presets": [
       "@babel/preset-react",
-      "@babel/preset-env"
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties",
@@ -50,7 +61,7 @@
     "@babel/core": "^7.9.0",
     "@babel/node": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@welldone-software/why-did-you-render": "^4.0.6",
     "axios": "^0.19.2",
@@ -60,7 +71,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "express": "^4.17.1",
-    "jest": "^25.2.7",
+    "jest": "^25.3.0",
     "lodash.debounce": "^4.0.8",
     "lodash.isempty": "^4.4.0",
     "lodash.isequal": "^4.5.0",
