@@ -52,6 +52,7 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
+    "@welldone-software/why-did-you-render": "^4.0.6",
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "bindings": "^1.5.0",
@@ -60,11 +61,16 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "express": "^4.17.1",
     "jest": "^25.2.7",
+    "lodash.debounce": "^4.0.8",
     "lodash.isempty": "^4.4.0",
+    "lodash.isequal": "^4.5.0",
+    "lodash.pickby": "^4.6.0",
     "pm2": "^4.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1",
+    "require-in-the-middle": "^5.0.3",
+    "update": "^0.7.4",
     "worker-farm": "^1.7.0"
   }
 }
